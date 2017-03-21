@@ -29,13 +29,13 @@ def fetchPreMarket(link,a,b):
     t=micex[a].resample('Q', how=b)
     v=np.concatenate([t[-2:]])
     d=pd.DataFrame({'g':v})
-    d.to_excel('/home/tatar/Yandex.Disk/Java_study/market3/intelligance3/Data/m.xlsx')
+    d.to_excel('/home/first/data/Java_study/marketplus/intelligance3/Data/m.xlsx')
 
     return d
 
 while True:
-    a = pd.read_excel('/home/tatar/Yandex.Disk/Java_study/market3/intelligance3/Data/Data_mlv_rost_multireg_perebor.xlsx')
-    b=pd.read_excel('/home/tatar/Yandex.Disk/Java_study/market3/intelligance3/Data/Data_mlv_rost_multireg_perebor.xlsx')
+    a = pd.read_excel('/home/first/data/Java_study/marketplus/intelligance3/Data/Data_mlv_rost_multireg_perebor.xlsx')
+    b=pd.read_excel('/home/first/data/Java_study/marketplus/intelligance3/Data/Data_mlv_rost_multireg_perebor.xlsx')
     b.columns= \
         ['A1']+['A2']+['classA3']+['A4']+['classA5'] \
         +['A6']+['A7']+['classA8'] +['classA9']+['A10']+['classA11'] \
@@ -143,31 +143,31 @@ while True:
     X2_train,X2_test,y2_train,y2_test= \
         train_test_split(X,y6,test_size=0.2,random_state=11)
     t0= fetchPreMarket(url,'CLOSE','min')
-    a1=pd.read_excel('/home/tatar/Yandex.Disk/Java_study/market3/intelligance3/Data/m.xlsx')
+    a1=pd.read_excel('/home/first/data/Java_study/marketplus/intelligance3/Data/m.xlsx')
     indmin_rp=((a1.loc[1,'g']-a1.loc[0,'g'])/a1.loc[0,'g']) \
               /abs((a1.loc[1,'g']-a1.loc[0,'g'])/a1.loc[0,'g'])
     t1= fetchPreMarket(url,'CLOSE','max')
-    a1=pd.read_excel('/home/tatar/Yandex.Disk/Java_study/market3/intelligance3/Data/m.xlsx')
+    a1=pd.read_excel('/home/first/data/Java_study/marketplus/intelligance3/Data/m.xlsx')
     indmax=a1.loc[1,'g']
     indmax_rp=((a1.loc[1,'g']-a1.loc[0,'g'])/a1.loc[0,'g']) \
               /abs((a1.loc[1,'g']-a1.loc[0,'g'])/a1.loc[0,'g'])
     t2= fetchPreMarket(url,'VALUE','min')
-    a1=pd.read_excel('/home/tatar/Yandex.Disk/Java_study/market3/intelligance3/Data/m.xlsx')
+    a1=pd.read_excel('/home/first/data/Java_study/marketplus/intelligance3/Data/m.xlsx')
     volmin=a1.loc[1,'g']
     volmin_rp=((a1.loc[1,'g']-a1.loc[0,'g'])/a1.loc[0,'g']) \
               /abs((a1.loc[1,'g']-a1.loc[0,'g'])/a1.loc[0,'g'])
     t3= fetchPreMarket(url,'VALUE','max')
-    a1=pd.read_excel('/home/tatar/Yandex.Disk/Java_study/market3/intelligance3/Data/m.xlsx')
+    a1=pd.read_excel('/home/first/data/Java_study/marketplus/intelligance3/Data/m.xlsx')
     volmax=a1.loc[1,'g']
     volmax_rp=((a1.loc[1,'g']-a1.loc[0,'g'])/a1.loc[0,'g']) \
               /abs((a1.loc[1,'g']-a1.loc[0,'g'])/a1.loc[0,'g'])
     t4= fetchPreMarket(url_r,'CLOSE','median')
-    a1=pd.read_excel('/home/tatar/Yandex.Disk/Java_study/market3/intelligance3/Data/m.xlsx')
+    a1=pd.read_excel('/home/first/data/Java_study/marketplus/intelligance3/Data/m.xlsx')
     remed=a1.loc[1,'g']
     remed_rp=((a1.loc[1,'g']-a1.loc[0,'g'])/a1.loc[0,'g']) \
              /abs((a1.loc[1,'g']-a1.loc[0,'g'])/a1.loc[0,'g'])
     t5= fetchPreMarket(url_r,'CLOSE','min')
-    a1=pd.read_excel('/home/tatar/Yandex.Disk/Java_study/market3/intelligance3/Data/m.xlsx')
+    a1=pd.read_excel('/home/first/data/Java_study/marketplus/intelligance3/Data/m.xlsx')
     remin=a1.loc[1,'g']
     remin_rp=((a1.loc[1,'g']-a1.loc[0,'g'])/a1.loc[0,'g']) \
              /abs((a1.loc[1,'g']-a1.loc[0,'g'])/a1.loc[0,'g'])
@@ -269,7 +269,7 @@ while True:
     ET.SubElement(doc, "field3").text=value3
     ET.SubElement(doc, "field4").text=value4
     tree=ET.ElementTree(root)
-    tree.write("/home/tatar/Yandex.Disk/Java_study/market3/data.xml")
+    tree.write("/home/first/data/Java_study/marketplus/data.xml")
     #time.sleep(10)
 
 

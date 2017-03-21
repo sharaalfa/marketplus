@@ -1,0 +1,72 @@
+group 'sharafutdinov.artur.marketplus'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'war'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+    
+    //spring dependencies
+    compile group: 'org.springframework', name: 'spring-core', version: '4.1.6.RELEASE'
+    testCompile group: 'org.springframework', name: 'spring-core', version: '4.1.6.RELEASE'
+
+    compile group: 'org.springframework', name: 'spring-orm', version: '4.1.1.RELEASE'
+    testCompile group: 'org.springframework', name: 'spring-orm', version: '4.1.1.RELEASE'
+
+    compile group: 'org.springframework', name: 'spring-web', version: '4.1.6.RELEASE'
+    testCompile group: 'org.springframework', name: 'spring-web', version: '4.1.6.RELEASE'
+
+    compile group: 'org.springframework', name: 'spring-webmvc', version: '4.1.6.RELEASE'
+    testCompile group: 'org.springframework', name: 'spring-webmvc', version: '4.1.6.RELEASE'
+
+    compile group: 'org.springframework.security', name: 'spring-security-core', version: '4.0.1.RELEASE'
+    testCompile group: 'org.springframework.security', name: 'spring-security-core', version: '4.0.1.RELEASE'
+
+    compile group: 'org.springframework.security', name: 'spring-security-web', version: '4.0.1.RELEASE'
+    testCompile group: 'org.springframework.security', name: 'spring-security-web', version: '4.0.1.RELEASE'
+
+    compile group: 'org.springframework.security', name: 'spring-security-config', version: '4.0.1.RELEASE'
+    testCompile group: 'org.springframework.security', name: 'spring-security-config', version: '4.0.1.RELEASE'
+
+    //hibernate dependencies
+    compile group: 'org.hibernate', name: 'hibernate-entitymanager', version: '4.3.11.Final'
+    testCompile  group: 'org.hibernate', name: 'hibernate-entitymanager', version: '4.3.11.Final'
+
+    //postgres dependencies
+    compile group: 'org.postgresql', name: 'postgresql', version: '42.0.0.jre7'
+    testCompile group: 'org.postgresql', name: 'postgresql', version: '42.0.0.jre7'
+
+    // https://mvnrepository.com/artifact/javax.servlet/jstl
+    compile group: 'javax.servlet', name: 'jstl', version: '1.2'
+
+    // https://mvnrepository.com/artifact/javax.servlet/servlet-api
+    compile group: 'javax.servlet', name: 'servlet-api', version: '2.5'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+task wrapper(type: Wrapper){
+    gradleVersion=3.4
+}
