@@ -38,7 +38,7 @@ public class UserService implements UserDetailsService {
     }
 
     private List<SimpleGrantedAuthority> buildSimpleGrantedAuthorities(final User user) {
-        List<SimpleGrantedAuthority> simpleGrantedAuthorities = new ArrayList<>();
+        List<SimpleGrantedAuthority> simpleGrantedAuthorities = new ArrayList<>( );
         if (user.getRoles() != null) {
             for (Role role : user.getRoles()) {
                 simpleGrantedAuthorities.add(new SimpleGrantedAuthority(role.getName()));
@@ -46,4 +46,5 @@ public class UserService implements UserDetailsService {
         }
         return simpleGrantedAuthorities;
     }
+
 }

@@ -79,7 +79,7 @@
 </script>
 </head>
 <body>
-
+<a href="/registration"><H1>Регистрация</H1></a>
 <style>
     table {
         width: 300px;

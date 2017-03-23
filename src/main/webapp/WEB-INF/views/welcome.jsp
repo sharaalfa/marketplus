@@ -6,6 +6,7 @@
     <title>Стартовая страница</title>
 </head>
 <body>
+<a href="/registration"><H1>Регистрация</H1></a>
 Greeting : ${greeting}
 <br/>
 <h3>Привествуем Вас!!!</h3>

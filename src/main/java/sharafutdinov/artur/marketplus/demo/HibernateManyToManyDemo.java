@@ -42,9 +42,9 @@ public class HibernateManyToManyDemo {
         role1.addUser(user1);
 
         User user2 = new User();
-        user2.setUserId("admin");
-        user2.setName("admin");
-        user2.setPassword("admin");
+        user2.setUserId("artur");
+        user2.setName("artur");
+        user2.setPassword("123");
         user2.setActive(1);
         final HashSet<Role> roles2 = new HashSet<>();
         roles2.add(role1);
