@@ -65,5 +65,5 @@ toolz==0.8.2
 traitlets==4.3.2
 urllib3==1.13.1
 wcwidth==0.1.7
-Werkzeug==0.11.15
+Werkzeug==0.15.3
 xlrd==1.0.0
