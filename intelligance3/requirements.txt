@@ -63,7 +63,7 @@ simplegeneric==0.8.1
 six==1.10.0
 toolz==0.8.2
 traitlets==4.3.2
-urllib3==1.13.1
+urllib3==1.26.5
 wcwidth==0.1.7
 Werkzeug==0.11.15
 xlrd==1.0.0
