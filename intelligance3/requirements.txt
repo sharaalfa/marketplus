@@ -1,4 +1,4 @@
-Babel==2.3.4
+Babel==2.9.1
 backports.shutil-get-terminal-size==1.0.0
 boto==2.38.0
 chardet==2.3.0
